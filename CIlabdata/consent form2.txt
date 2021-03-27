@@ -1,0 +1,78 @@
+**DFS**
+S1: Define the graph.
+S2: Pick any node. If it is unvisited, mark it as visited and recur on all its adjacent nodes.
+S3: Repeat until all the nodes are visited, or the node to be searched is found.
+
+
+**BFS**
+S1: Define the graph
+S2: Pick any node, visit the adjacent unvisited vertex, mark it as visited, display it, and insert it in a queue.
+S3: If there are no remaining adjacent vertices left, remove the first vertex from the queue.
+S4: Repeat S2 and S3 until the queue is empty or the desired node is found.
+
+
+
+**GENETIC**
+S1: Randomly initialize populations p
+S2: Determine fitness of population
+S3: Until convergence repeat:
+	a) Select parents from population
+	b) Crossover and generate new population 
+	c) Perform mutation on new population 
+	d) Calculate fitness for new population
+
+
+
+**HILL CLIMBING**
+S1: define objective function and the bounds on each input variable to the objective function. The bounds will be a 2D array with one dimension for each input variable that defines the minimum and maximum for the variable.
+S2: generate initial solution as a random point within the bounds of the problem, then evaluate it using the objective function.
+S3: loop over a predefined number of iterations of the algorithm.
+S4: evaluate the new candidate solution with the objective function.
+S5: check if the evaluation of this new point is as good as or better than the current best point, and if it is, replace our current best point with this new point.
+
+
+
+**ALPHA BETA**
+evaluate (node, alpha, beta)
+ if node is a leaf
+ 	return the utility value of node
+ if node is a minimizing node
+ 	for each child of node
+ 	beta = min (beta, evaluate (child, alpha, beta))
+ 	if beta <= alpha
+ 		return beta
+ return beta
+ if node is a maximizing node
+ 	for each child of node
+ 	alpha = max (alpha, evaluate (child, alpha, beta))
+ 	if beta <= alpha
+ 		return alpha
+ return alpha
+
+
+
+
+**FUZZY**
+S1: Generate universe variables
+S2: Generate fuzzy membership functions
+S3: Generate fuzzy rules 
+		If the food is bad OR the service is poor, then the tip will be low
+		If the service is acceptable, then the tip will be medium
+		If the food is great OR the service is amazing, then the tip will be high.
+S4: Apply rules on input
+S5: Perform defuzzification
+
+
+
+**NEURAL**
+S1: Synaptic weights are calculated by taking a random number between 1 and 3.
+S2: The input matrix consisting of example input is taken and the output matrix is transposed.
+S3: Neural network is trained by taking 15000 iterations.
+S4: In each iteration, the output is calculated by taking the dot product between inputs and synaptic
+weights.
+S5: The error is calculated after each iteration and the adjustments to the synaptic weight is done by
+taking the dot product between inputs transpose and product of error and sigmoid derivative of
+the input.
+S6: This adjustment is then added tot the synaptic weight which is used for further iterations.
+S7: This process continues until all the iterations are completed.
+S8: The synaptic weights along with output is displayed for new values given by the user.

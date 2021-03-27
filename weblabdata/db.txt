@@ -1,0 +1,49 @@
+create database labexam;
+use labexam;
+
+ #use case 1:
+
+create table myorder(orderid varchar(50), productid varchar(50), productDetails varchar(500), paymentDetails varchar(100), shippingDetails varchar(500), Primary key(orderid, productid));
+insert into myorder values("F123","Hp54","HP pendrive","upi","Bangalore");
+insert into myorder values("F124","Hp56","HP mouse","upi","Bangalore");
+insert into myorder values("F123","Hp14","HP 14inch laptop","Credit card","Bangalore");
+insert into myorder values("F123","Hp55","HPkeyboard","upi","Bangalore"); 
+
+
+#use case 2:
+create table productdesc (productid varchar(50) primary key, productname varchar(500), productprice int, discounts int);
+insert into productdesc values("A56","Hp laptop",40999,18);
+insert into productdesc values("A51","Hp Keyboard",41999,00);
+insert into productdesc values("A59","Dell Keyboard",41999,10);
+insert into productdesc values("A58","Dell mouse",41999,30);
+insert into productdesc values("A57","Dell laptop",41999,28);
+
+
+#use case 3:
+create table student (studentid varchar(25) primary key, studentname varchar(100), Sem1 varchar(10), Sem2 varchar(10), Sem3 varchar(10), Sem4 varchar(10));
+insert into student values("17ETCS002175","Shubham","Yes","Yes","Yes","Yes");
+insert into student values("17ETCS002176","Shubham","No","No","No","No");
+insert into student values("17ETCS002177","Shubham","Yes","Yes","No","No");
+insert into student values("17ETCS002178","Shubham","Yes","Yes","Yes","No");
+
+# use case 4:
+ create table autoorder(Orderid int auto_increment primary key , orderDate date);
+
+
+#use case 5:
+create table traffic(driverid varchar(10), drivername varchar(100), type varchar(50), violate int);
+insert into traffic values("AP14","Gaurav", "taxi",6);
+insert into traffic values("AP13","Gaurav", "taxi",7);
+insert into traffic values("AP12","Gaurav", "taxi",2);
+
+
+
+# use case Register and login :
+create table user( fname  varchar(100), contactno   varchar(10), city varchar(50), state varchar(50), zipcode varchar(6),gender varchar(10), quali varchar(10) ,emailid varchar(100), password varchar(25), primary key(contactno, emailid));
+
+#search:
+ create table hotel(Hotelid varchar(50) primary key, HotelName varchar(100),hoteltype varchar(25), servicetype varchar(50));
+insert into hotel values ("AB1", "ABB hotel", "veg","Self Service");
+insert into hotel values ("AB2", "ABB hotel", "veg","online order");
+insert into hotel values ("AB3", "ABB hotel", "nonveg","online order");
+

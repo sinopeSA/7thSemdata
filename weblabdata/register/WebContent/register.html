@@ -1,0 +1,140 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Registration</title>
+</head>
+ <script type="text/javascript">
+      function validate()
+      {
+      
+         if( document.myForm.fname.value == "" )
+         {
+            alert( "Please provide your Full Name!" );
+            document.myForm.fname.focus() ;
+            return false;
+         }
+         
+          if( document.myForm.number.value == "")
+         {
+            alert( "Please provide your Contact Details!" );
+            document.myForm.number.focus() ;
+            return false;
+         }
+          if( isNaN( document.myForm.number.value))
+         {
+            alert( "Please input integers only!" );
+            document.myForm.number.focus() ;
+            return false;
+         }
+         
+           if( document.myForm.number.value.length < 9 )
+         {
+            alert( "Invalid Mobile Number!" );
+            document.myForm.number.focus() ;
+            return false;
+         }
+         
+         
+          if( document.myForm.city.value == "" )
+         {
+            alert( "Please provide your City!" );
+            document.myForm.city.focus() ;
+            return false;
+         }
+          if( document.myForm.state.value == "" )
+         {
+            alert( "Please provide your State!" );
+            document.myForm.state.focus() ;
+            return false;
+         }
+         
+         if( document.myForm.zipcode.value == "" ||
+         isNaN( document.myForm.zipcode.value ) ||
+         document.myForm.zipcode.value.length < 5 )
+         {
+            alert( "Please provide a zip in the format ######." );
+            document.myForm.zipcode.focus() ;
+            return false;
+         }
+             if( document.myForm.email.value == "" )
+         {
+            alert( "Please provide your Email!" );
+            document.myForm.email.focus() ;
+            return false;
+         }
+           
+           if( document.myForm.pword.value == "" )
+         {
+            alert( "Please provide Password!" );
+            document.myForm.pword.focus() ;
+            return false;
+         }
+         
+           if( document.myForm.pword.value.length < 7 )
+         {
+            alert( "Password lenght should be greater than 6" );
+            document.myForm.pword.focus() ;
+            return false;
+         }
+        
+      }
+      </script>
+      
+<body bgcolor=#fefbd8>
+<center>
+<font color="red" size="6" face="monotype corsiva"> Food Maze </font><br>
+<font color="blue" size="5" > Registration </font>
+<form action="Register" method="post" name="myForm" onsubmit="return(validate())" ;>
+<table>
+<tr>
+<td>Full Name</td>
+<td><input type="text" name="fname"></td>
+</tr>
+<tr>
+    <td>Contact Number</td>
+    <td><input type="text" name="number"></td>
+    </tr>
+<tr><td><Address></Address></td></tr>
+
+<tr>
+    <td>City</td>
+    <td><input type="text" name="city"></td>
+</tr>
+<tr>
+    <td>State</td>
+    <td><input type="text" name="state"></td>
+</tr>
+<tr>
+    <td>Zipcode</td>
+    <td><input type="text" name="zipcode"></td>
+</tr>
+<tr>
+<td>Gender</td>
+<td><input type="radio" name="gender" value="male">Male
+<input type="radio" name="gender" value="female">female</td>
+</tr>
+
+<tr>
+<td>Qualification</td>
+<td> <select name="quali">
+<option value="-1" selected>Choose</option>
+<option value="M.Sc">M.Sc</option>
+<option value="M.Tech">M.Tech</option>
+<option value="B.E">B.E</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Email</td>
+<td><input type="text" name="email"></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type="password" name="pword"></td>
+</tr>
+<td colspan="2" align="center"><input type="submit" value="register" />
+</table>
+</form>
+</center>
+</body>
+</html>
